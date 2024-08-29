@@ -50,7 +50,7 @@ const AppState = ({ children }) => {
       ["platform", searchData.platform.toLowerCase()],
     ]);
     const response = await fetch(
-      `http://localhost:5000/api/v1/getGames?${query.toString()}`,
+      `api/v1/getGames?${query.toString()}`,
       {
         method: "GET",
       }
@@ -62,7 +62,7 @@ const AppState = ({ children }) => {
   };
 
   const getGenres = async () => {
-    const response = await fetch(`http://localhost:5000/api/v1/getGenres`, {
+    const response = await fetch(`api/v1/getGenres`, {
       method: "GET",
     });
 
@@ -71,7 +71,7 @@ const AppState = ({ children }) => {
   };
 
   const getPlatforms = async () => {
-    const response = await fetch(`http://localhost:5000/api/v1/getPlatforms`, {
+    const response = await fetch(`api/v1/getPlatforms`, {
       method: "GET",
     });
 
@@ -82,7 +82,7 @@ const AppState = ({ children }) => {
   const getDevelopers = async () => {
     const query = new URLSearchParams([["page", developerPage]]);
     const response = await fetch(
-      `http://localhost:5000/api/v1/getDevelopers?${query.toString()}`,
+      `api/v1/getDevelopers?${query.toString()}`,
       {
         method: "GET",
       }
@@ -95,7 +95,7 @@ const AppState = ({ children }) => {
   const getGameDetail = async (id) => {
     const query = new URLSearchParams([["id", id.id]]);
     const response = await fetch(
-      `http://localhost:5000/api/v1/game/details?${query.toString()}`,
+      `api/v1/game/details?${query.toString()}`,
       {
         method: "GET",
       }
@@ -108,7 +108,7 @@ const AppState = ({ children }) => {
   const getGameLinks = async (id) => {
     const query = new URLSearchParams([["id", id.id]]);
     const response = await fetch(
-      `http://localhost:5000/api/v1/game/links?${query.toString()}`,
+      `api/v1/game/links?${query.toString()}`,
       {
         method: "GET",
       }
@@ -121,7 +121,7 @@ const AppState = ({ children }) => {
   const getGameScreenshots = async (id) => {
     const query = new URLSearchParams([["id", id.id]]);
     const response = await fetch(
-      `http://localhost:5000/api/v1/game/screenshots?${query.toString()}`,
+      `api/v1/game/screenshots?${query.toString()}`,
       {
         method: "GET",
       }
@@ -139,7 +139,7 @@ const AppState = ({ children }) => {
       ["category", category],
     ]);
     const response = await fetch(
-      `http://localhost:5000/api/v1//game/category?${query.toString()}`
+      `api/v1//game/category?${query.toString()}`
     );
 
     const responseBody = await response.json();
@@ -147,7 +147,7 @@ const AppState = ({ children }) => {
   };
 
   const register = async (formData) => {
-    const response = await fetch(`http://localhost:5000/api/v1/register`, {
+    const response = await fetch(`api/v1/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -166,7 +166,7 @@ const AppState = ({ children }) => {
   };
 
   const login = async (formData) => {
-    const response = await fetch(`http://localhost:5000/api/v1/login`, {
+    const response = await fetch(`api/v1/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -189,7 +189,7 @@ const AppState = ({ children }) => {
       localStorage.getItem("token") &&
       localStorage.getItem("token") !== undefined
     ) {
-      const response = await fetch(`http://localhost:5000/api/v1/getUser`, {
+      const response = await fetch(`api/v1/getUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -211,7 +211,7 @@ const AppState = ({ children }) => {
       localStorage.getItem("token") !== undefined
     ) {
       console.log("entered");
-      const response = await fetch(`http://localhost:5000/api/v1/setGame`, {
+      const response = await fetch(`api/v1/setGame`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -227,7 +227,7 @@ const AppState = ({ children }) => {
   };
 
   const removeGame = async (id) => {
-    const response = await fetch(`http://localhost:5000/api/v1/removeGame`, {
+    const response = await fetch(`api/v1/removeGame`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -242,7 +242,7 @@ const AppState = ({ children }) => {
   };
 
   const searchGame = async () => {
-    const response = await fetch(`http://localhost:5000/api/v1/searchGame`, {
+    const response = await fetch(`api/v1/searchGame`, {
       method: "POSt",
       headers: {
         "Content-Type": "application/json",
