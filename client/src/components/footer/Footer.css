@@ -1,0 +1,9 @@
+.footer-wrapper {
+    margin: 1rem;
+}
+
+.footer-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

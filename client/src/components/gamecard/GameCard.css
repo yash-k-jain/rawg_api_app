@@ -1,0 +1,181 @@
+.div-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2.6rem;
+    border: 2px solid #666;
+    border-radius: 2rem;
+    background-color: rgba(128, 128, 128, 0.419);
+    box-shadow: 0 0 10px white;
+    width: 18rem;
+    position: relative;
+  }
+  
+  .div-game .game-image {
+    width: 18rem;
+    height: 10rem;
+    border-radius: 2rem 2rem 0 0;
+    aspect-ratio: 16/9;
+  }
+  
+  .div-game h5 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    color: rgb(241, 7, 230);
+    margin-top: auto;
+  }
+  
+  .div-game .released-date,
+  .div-game .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  .div-game .released-date span:nth-child(1),
+  .div-game .rating span:nth-child(1) {
+    font-size: 1.3rem;
+    font: 800;
+    margin: 0.5rem 0.5rem;
+  }
+  
+  .div-game .released-date span:nth-child(2),
+  .div-game .rating span:nth-child(2) {
+    font-size: 1.1rem;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 33%;
+    height: 70%;
+    border-radius: 0.3rem;
+  }
+  
+  .div-game .rating span:nth-child(2) {
+    width: 18%;
+    margin-right: 0.4rem;
+  }
+  
+  .div-game .rating span:nth-child(3) {
+    font-size: 1.3rem;
+  }
+  
+  .div-game .btn-more, .div-game .btn-heart {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    outline: none;
+    background-color: purple;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: large;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .div-btn {
+    display: flex;
+  }
+
+  .div-game .btn-heart {
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: purple;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2%;
+    left: 75%;
+  }
+  
+  @media screen and (min-width: 770px) and (max-width: 1026px) {
+    .div-game {
+      margin: 1rem 1.24rem;
+      width: 16rem;
+    }
+    .div-game .game-image {
+      width: 16rem;
+    }
+  }
+  
+  @media screen and (min-width: 427px) and (max-width: 769px) {
+    .div-game {
+      margin: 1rem 2.2rem;
+    }
+    .div-game h5 {
+      font-size: 1.2rem;
+    }
+    .div-game .released-date span:nth-child(1),
+    .div-game .rating span:nth-child(1) {
+      font-size: 1.1rem;
+    }
+    .div-game .released-date span:nth-child(2),
+    .div-game .rating span:nth-child(2) {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 377px) and (max-width: 426px) {
+    .div-game {
+      width: 18rem;
+      margin: 1rem 3rem;
+    }
+    .div-game .game-image {
+      width: 18rem;
+      height: 10rem;
+    }
+    .div-game .released-date span:nth-child(2) {
+      font-size: 1rem;
+      width: 37%;
+    }
+    .div-game .btn-more {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 322px) and (max-width: 376px) {
+    .div-game {
+      width: 18rem;
+      margin: 1rem 1.6rem;
+    }
+    .div-game .game-image {
+      width: 18rem;
+      height: 10rem;
+    }
+    .div-game .released-date span:nth-child(2) {
+      font-size: 1rem;
+      width: 37%;
+    }
+    .div-game .btn-more {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 321px) {
+    .div-game {
+      width: 16rem;
+      margin: 1.5rem 1rem;
+    }
+    .div-game .game-image {
+      width: 16rem;
+      height: 10rem;
+    }
+    .div-game .released-date span:nth-child(2) {
+      font-size: 1rem;
+      width: 37%;
+    }
+    .div-game .btn-more {
+      font-size: 1rem;
+    }
+  }
+  

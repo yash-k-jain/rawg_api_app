@@ -1,0 +1,263 @@
+.game-wrapper {
+  margin: 3rem;
+  overflow: hidden;
+}
+
+.game-details-div {
+  height: 40rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+
+.game-details-div h3 {
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 20%;
+  margin-left: 1%;
+  color: white;
+}
+
+.game-details-div .details {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0 1%;
+  width: 40%;
+  font-size: 1.5rem;
+  row-gap: 1rem;
+  color: white;
+  font-weight: 900;
+}
+
+.game-details-div .rating {
+  display: flex;
+  align-items: center;
+}
+
+h6 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  border-bottom: 2px solid purple;
+  padding-bottom: 1rem;
+}
+
+.description-div {
+  font-size: 1.2rem;
+}
+
+.genre-div,
+.tags-div {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.genre-div .genre,
+.tags-div .tag {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+  background-color: purple;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.developers-div .developers {
+    display: flex;
+    overflow: auto;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.developer img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.developer span {
+    margin-top: .3rem;
+}
+
+.links-div .links {
+  display: block;
+  font-size: 3rem;
+  line-height: 5rem;
+}
+
+.links .link {
+  color: white;
+  margin-right: 1rem;
+  border: 2px solid purple;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.screenshots {
+  display: flex;
+}
+
+.screenshots img {
+  margin-right: 2rem;
+  width: 6rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  object-position: center;
+  transition: all .3s ease-in-out;
+}
+
+.screenshots img:hover {
+  width: 50rem;
+}
+
+@media screen and (min-width: 770px) and (max-width: 1026px) {
+  .game-wrapper {
+    margin: 2rem;
+  }
+  .game-details-div {
+    height: 30rem;
+  }
+  .screenshots img {
+    width: 3rem;
+  }
+  .screenshots img:hover {
+    width: 35rem;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .game-wrapper {
+    margin: 1.5rem;
+  }
+  .game-details-div {
+    height: 24rem;
+  }
+  .game-details-div h3 {
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  .game-details-div .details {
+    font-size: 1.2rem;
+  }
+  .image-changer {
+    width: 100%;
+    position: relative;
+  }
+  .image-changer button {
+    position: absolute;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+  .image-changer button:nth-child(1){
+    left: 1rem;
+    top: 50%;
+  }
+  .image-changer button:nth-child(2){
+    right: 1rem;
+    top: 50%;
+  }
+  .image-changer img {
+    width: 44.5rem;
+    object-fit: cover;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 426px) {
+  .game-wrapper {
+    margin: 1rem;
+  }
+  .game-details-div {
+    height: 13rem;
+  }
+  .game-details-div h3 {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+  .game-details-div .details {
+    font-size: .7rem;
+  }
+  .description-div {
+    font-size: .9rem;
+  }
+  .genre-div, .tags-div {
+    font-size: .9rem;
+  }
+  .links-div .links {
+    font-size: 2rem;
+  }
+  .developer img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .image-changer {
+    width: 100%;
+    position: relative;
+  }
+  .image-changer button {
+    position: absolute;
+  }
+  .image-changer button:nth-child(1){
+    left: .5rem;
+    top: 50%;
+  }
+  .image-changer button:nth-child(2){
+    right: .5rem;
+    top: 50%;
+  }
+  .image-changer img {
+    width: 25rem;
+    height: 14rem;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 322px) and (max-width: 376px) {
+  .game-details-div {
+    height: 12rem;
+  }
+  .image-changer img{
+    width: 21.5rem;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 321px) {
+  .game-details-div {
+    height: 10rem;
+    row-gap: 0;
+    border-radius: 0;
+  }
+  .game-details-div .details {
+    width: 50%;
+  }
+  .image-changer img{
+    width: 18rem;
+    height: 10rem;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}

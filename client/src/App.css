@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.878);
+  color: white;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}

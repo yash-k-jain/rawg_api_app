@@ -1,0 +1,148 @@
+.div-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 1rem;
+  z-index: 100 !important;
+}
+
+.div-navbar {
+  background-color: black;
+  width: 55vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  padding: .5rem;
+}
+
+.div-link .menu {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-link .menu-item {
+  list-style: none;
+}
+
+.div-link .menu-item-links,
+.link-hire {
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: wheat;
+  font-size: 1rem;
+  position: relative;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 100;
+  font-weight: 700;
+}
+
+.menu-item-links:hover {
+  opacity: 1;
+}
+
+.menu-item-links::before {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -1rem;
+  opacity: 0;
+  transform: translateX(-1.5rem);
+  transition: all 0.3s ease;
+}
+
+.menu-item-links:hover::before {
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.btn-hire {
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: wheat;
+  background-color: transparent;
+  border: 2px solid wheat;
+  position: relative;
+  z-index: 100;
+  margin-right: 2rem;
+}
+
+.btn-hire:hover .link-hire {
+  color: black;
+}
+
+.btn-hire::before {
+  content: "";
+  height: 2.55rem;
+  width: 1rem;
+  background-color: wheat;
+  border-radius: 0.4rem;
+  opacity: 0;
+  position: absolute;
+  top: -0.1rem;
+  transform: translateX(-1rem);
+  transition: all .5s ease;
+}
+
+.btn-hire:hover::before {
+  opacity: 1;
+  width: 100%;
+  transform: translateX(-0.5rem);
+}
+
+.btn-menu {
+    background-color: transparent;
+    border: 2px solid wheat;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 3rem;
+}
+
+@media screen and (min-width: 1026px) and (max-width: 1441px) {
+  .div-navbar {
+    width: 60vw;
+    height: 4.5vh;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .div-navbar {
+    padding: .1rem;
+    width: 95vw;
+    height: 8vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .div-nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 87;
+  }
+  .div-navbar {
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+    .btn-menu {
+        display: block;
+        margin-right: 1.5rem;
+    }
+    .div-link {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+.horizontal-wrapper {
+    margin: 1rem 1rem;
+}
+
+.scroll-container{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.item img {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item h3 {
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 428px) {
+    .item img {
+        width: 7rem;
+        height: 7rem;
+    }
+}

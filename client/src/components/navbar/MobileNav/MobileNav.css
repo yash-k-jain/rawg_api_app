@@ -1,0 +1,73 @@
+.mobile-div-navbar {
+  background-color: rgba(27, 25, 25, 0.959);
+  width: 16rem;
+  height: 100vh;
+  color: wheat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000 !important;
+  transform: translateX(-16rem);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-div-navbar.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.div-portfolio {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid wheat;
+  border-radius: 1px;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: -1rem;
+  margin-top: 2rem;
+}
+
+.mobile-menu-item {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.mobile-menu-item-links,
+.mobile-link-hire {
+  text-decoration: none;
+  color: wheat;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.mobile-link-hire {
+  border-bottom: none;
+}
+
+.mobile-btn-hire {
+  background-color: transparent;
+  border: 2px solid wheat;
+  width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-btn-hire:active {
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+
+@media screen and (max-width: 320px) {
+  .mobile-div-navbar {
+    width: 14.5rem;
+    z-index: 1000;
+  }
+}

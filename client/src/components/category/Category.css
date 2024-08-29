@@ -1,0 +1,13 @@
+.category-wrapper {
+    margin: 1.5rem;
+}
+
+.category-wrapper h1 {
+    font-size: 4rem;
+    border-bottom: 2px solid purple;
+}
+
+.category-game {
+    display: flex;
+    flex-wrap: wrap;
+}
